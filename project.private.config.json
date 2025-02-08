@@ -3,5 +3,6 @@
   "projectname": "mytaro",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "3.7.7"
 }
