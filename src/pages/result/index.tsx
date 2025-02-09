@@ -17,7 +17,7 @@ export default () => {
     <View className="resultPage">
       <View className="at-article__h1 title">{result.resultName}</View>
       <View className="at-article__h2 subTitle">{result.resultDesc}</View>
-      <AtButton className="indexBtn" type='primary' onClick={() => { Taro.navigateTo({ url: '/pages/index/index' }) }} circle>返回主页</AtButton>
+      <AtButton className="indexBtn" type='primary' onClick={() => { Taro.reLaunch({ url: '/pages/index/index' }) }} circle>返回主页</AtButton>
       <Image  className="indexImg" src={bg} />
       <GlobalFooter />
     </View>
