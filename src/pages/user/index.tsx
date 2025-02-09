@@ -19,7 +19,7 @@ export default class Index extends Component<PropsWithChildren> {
     return (
       <View className='index'>
         <Text>Hello world1!!!!!!</Text>
-        <AtButton type='primary' onClick={() => { Taro.navigateTo({ url: '/pages/index/index' })}}>路飞</AtButton>
+        <AtButton className="btn" type='primary' onClick={() => { Taro.navigateTo({ url: '/pages/index/index' })}}>路飞</AtButton>
       </View>
     );
   }

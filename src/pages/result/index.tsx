@@ -7,17 +7,18 @@ import "taro-ui/dist/style/components/button.scss"; // 按需引入
 import "./index.scss";
 import GlobalFooter from "../../components/GlobalFooter";
 import Taro from "@tarojs/taro";
+import questionResults from '../../data/question_results.json'
 
 export default () => {
+  const result = questionResults[0]
+
+  console.log(result) // 打印结果
   return (
-
-
-
-    <View className="indexPage">
-      <View className="title">MBTI 性格测试</View>
-      <View className="subTitle">只需两分钟，就可以测试你的性格类型。</View>
-      <AtButton className="indexBtn" type='primary' onClick={() => { Taro.navigateTo({ url: '/pages/doQuestion/index' }) }} circle>按钮文案</AtButton>
-      <Image className="indexImg" src={bg} />
+    <View className="resultPage">
+      <View className="at-article__h1 title">{result.resultName}</View>
+      <View className="at-article__h2 subTitle">{result.resultDesc}</View>
+      <AtButton className="indexBtn" type='primary' onClick={() => { Taro.navigateTo({ url: '/pages/index/index' }) }} circle>返回主页</AtButton>
+      <Image  className="indexImg" src={bg} />
       <GlobalFooter />
     </View>
   );
