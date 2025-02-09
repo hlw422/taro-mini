@@ -10,13 +10,16 @@ import Taro from "@tarojs/taro";
 import questionResults from '../../data/question_results.json'
 
 export default () => {
-  const result = questionResults[0]
+  const totalScore = parseInt(Taro.getCurrentInstance().router.params.totalScore, 10);
 
+  console.log("receive total score: ", totalScore) // 打印总分
+    // 根据总分匹配结果
+    const result = questionResults.find(item => totalScore >= item.minScore && totalScore <= item.maxScore);
   console.log(result) // 打印结果
   return (
     <View className="resultPage">
-      <View className="at-article__h1 title">{result.resultName}</View>
-      <View className="at-article__h2 subTitle">{result.resultDesc}</View>
+      <View className="at-article__h1 title">{result ? result.resultName : "未找到结果"}</View>
+      <View className="at-article__h2 subTitle">{result ? result.resultDesc : "无法根据您的得分得出性格结果"}</View>
       <AtButton className="indexBtn" type='primary' onClick={() => { Taro.reLaunch({ url: '/pages/index/index' }) }} circle>返回主页</AtButton>
       <Image  className="indexImg" src={bg} />
       <GlobalFooter />

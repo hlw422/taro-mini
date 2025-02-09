@@ -24,10 +24,27 @@ export default () => {
     value: option.key
   }));
 
+
+
+    // 计算总分
+    const calculateTotalScore = () => {
+      let totalScore = 0;
+      answerList.forEach((answer, index) => {
+        const selectedOption = questions[index].options.find(option => option.key === answer);
+        if (selectedOption) {
+          totalScore += selectedOption.score;
+        }
+      });
+      return totalScore;
+    };
   const handleClick = () => {
-    // TODO: 处理按钮点击事件
+    const totalScore = calculateTotalScore();
+
+    console.log("answerList:", answerList);
+
+    console.log("totalScore:", totalScore);
     Taro.navigateTo({
-      url: "/pages/result/index"
+      url: `/pages/result/index?totalScore=${totalScore}`
     });
   };
 

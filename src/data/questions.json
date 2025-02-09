@@ -3,50 +3,30 @@
       "id": 1,
       "question": "你更喜欢以下哪种活动？",
       "options": [
-        { "key": "A", "value": "独自阅读一本书" },
-        { "key": "B", "value": "和朋友一起出去玩" },
-        { "key": "C", "value": "参加一场聚会" },
-        { "key": "D", "value": "尝试一项新技能" }
+        { "key": "A", "value": "独自阅读一本书", "score": 5 },
+        { "key": "B", "value": "和朋友一起出去玩", "score": 10 },
+        { "key": "C", "value": "参加一场聚会", "score": 8 },
+        { "key": "D", "value": "尝试一项新技能", "score": 7 }
       ]
     },
     {
       "id": 2,
       "question": "当遇到困难时，你通常会？",
       "options": [
-        { "key": "A", "value": "自己思考解决方案" },
-        { "key": "B", "value": "向朋友或家人寻求帮助" },
-        { "key": "C", "value": "暂时放下，等待灵感" },
-        { "key": "D", "value": "积极尝试不同的方法" }
+        { "key": "A", "value": "自己思考解决方案", "score": 7 },
+        { "key": "B", "value": "向朋友或家人寻求帮助", "score": 5 },
+        { "key": "C", "value": "暂时放下，等待灵感", "score": 4 },
+        { "key": "D", "value": "积极尝试不同的方法", "score": 10 }
       ]
     },
     {
       "id": 3,
       "question": "如果你有一个周末的自由时间，你会选择？",
       "options": [
-        { "key": "A", "value": "宅在家里放松" },
-        { "key": "B", "value": "和朋友一起去旅行" },
-        { "key": "C", "value": "参加一个社交活动" },
-        { "key": "D", "value": "学习或实践一个新技能" }
-      ]
-    },
-    {
-      "id": 4,
-      "question": "在团队合作中，你更倾向于？",
-      "options": [
-        { "key": "A", "value": "负责策划和制定计划" },
-        { "key": "B", "value": "主动沟通和协调团队" },
-        { "key": "C", "value": "提供创意和新想法" },
-        { "key": "D", "value": "执行任务并完成目标" }
-      ]
-    },
-    {
-      "id": 5,
-      "question": "你如何面对新的环境或变化？",
-      "options": [
-        { "key": "A", "value": "谨慎观察，慢慢适应" },
-        { "key": "B", "value": "积极结交新朋友" },
-        { "key": "C", "value": "享受新的挑战和刺激" },
-        { "key": "D", "value": "寻找稳定和熟悉的事物" }
+        { "key": "A", "value": "宅在家里放松", "score": 6 },
+        { "key": "B", "value": "和朋友一起去旅行", "score": 10 },
+        { "key": "C", "value": "参加一个社交活动", "score": 8 },
+        { "key": "D", "value": "学习或实践一个新技能", "score": 7 }
       ]
     }
   ]
